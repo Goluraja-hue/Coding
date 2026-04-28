@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        h1{
+            margin: 0px;
+        }
+
+        input{
+            width: 100px;
+        }
+
+        .container{
+            display: flex;
+            width: 300px;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .name{
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <h2 class="name"></h2>
+        <h1>Background Changer</h1>
+        <input type="color" name="color" id="color">
+        <button class="btn">Submit</button>
+    </div>
+        
+        
+
+</body>
+    <script>
+    let colorName = document.querySelector(".name");
+    let inputColor = document.querySelector("#color");
+    let button = document.querySelector(".btn");
+    let body = document.querySelector("body");
+    button.addEventListener("click",function(){
+        body.style.backgroundColor = ""inputColor.value;
+        colorName.innerHTML = inputColor.value;
+    })
+    </script>
+</html>

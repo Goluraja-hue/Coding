@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>change page color every second</h2>
+    <button class="Start">Start</button>
+    <button class="Stop">Stop</button>
+    <script>
+    function randomColor(){
+        let hex = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i<6; i++) {
+            color += hex[Math.floor(Math.random()*16)];
+        }
+        return color;
+    }
+
+
+    // console.log(randomColor());
+    let interval;
+    function startRandomColor(){
+        interval = setInterval(changeBgColor,1000);
+        function changeBgColor(){
+            document.body.style.backgroundColor = randomColor();
+
+    }
+    };
+    
+    function stopRandomColor(){
+        clearInterval(interval);
+        interval = null;
+    };
+
+document.querySelector(".Start").addEventListener("click",startRandomColor);
+
+document.querySelector(".Stop").addEventListener("click",stopRandomColor);
+</script>
+</body>
+</html>
