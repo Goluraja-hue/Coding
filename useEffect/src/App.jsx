@@ -4,7 +4,7 @@ import axios from 'axios';
 const App = () => {
 
 const [User, setUser] = useState('')
- const [Num, setNum] = useState(0)
+
   const getQuote = async () =>{
      const response = await axios.get("https://randomuser.me/api/");
     setUser((response.data.results[0].name.first)+ " " + (response.data.results[0].name.last))
@@ -13,7 +13,7 @@ const [User, setUser] = useState('')
 
   useEffect( function (){
     getQuote();
-  },[Num])
+  },[])
 
 
 
@@ -23,7 +23,7 @@ const [User, setUser] = useState('')
      {User}
       
     <button className="btn" onClick={()=>{
-      setNum(Num + 1);
+      getQuote();
     }}>Click</button>
       
     
