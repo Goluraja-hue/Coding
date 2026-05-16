@@ -1,0 +1,17 @@
+
+package.json
+package-lock.json
+readme.md
+eslint.config.js
+vite.config.js
+public
+node-node_modules
+index.html
+
+
+
+
+step 1 'npm install tailwindcss @tailwindcss/vite'
+step2 'import tailwindcss from '@tailwindcss/vite''
+step 3 'tailwindcss(),'
+step4 '@import "tailwindcss";'
